@@ -1,8 +1,8 @@
-import { Component } from "react";
+import React from "react";
 import "./App.css"
 import elephant from "./images/elephant.jpeg";
 
-export default class AppClass extends Component{
+export default class AppClass extends React.Component{
   
   imageData = ()=>{
     let data = [
@@ -26,5 +26,17 @@ export default class AppClass extends Component{
     return data;
   }
 
-  // code here
+  render(){
+    let imageData = this.imageData()
+    return(
+      <>
+      <h1>Kalvium Gallery</h1>
+      <div className = "parent_div">
+        {imageData.map((el)=>{
+          return <img src={el.img} alt="" className="image"/>
+        })}
+      </div>
+    </>
+    )
+  }
 }

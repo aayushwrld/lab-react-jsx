@@ -29,15 +29,13 @@ function App() {
   console.log(image_arr)
   return(
     <>
-      <h1>Kalvium Gallery</h1>
-        
-      <div className = "parent_div">
-        <img src={image_arr[0].img} className = 'image' id='image' alt="" />
-        <img src={image_arr[1].img} className = 'image' id='image' alt="" />
-        <img src={image_arr[2].img} className = 'image' id='image' alt="" />
-        <img src={image_arr[3].img} className = 'image' id='image' alt="" />
-      </div>
-    </>
+    <h1>Kalvium Gallery</h1>
+    <div className = "parent_div">
+      {image_arr.map((el)=>{
+        return <img src={el.img} alt="" className="image"/>
+      })}
+    </div>
+  </>
   )
 }
 

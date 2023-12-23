@@ -7,5 +7,5 @@ import AppClass from './AppClass';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <AppClass />   
+    <App />   
 );
